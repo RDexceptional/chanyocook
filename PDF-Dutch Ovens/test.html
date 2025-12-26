@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Download Page</title>
-    <!-- 基础样式美化 -->
     <style>
-        /* 全局样式重置 */
+        /* 保留之前的美化样式，让链接/按钮更美观 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
-
-        /* 页面背景与居中布局 */
         body {
             background-color: #f5f7fa;
             min-height: 100vh;
@@ -24,48 +21,27 @@
             justify-content: center;
             padding: 20px;
         }
-
-        /* 标题样式 */
         .page-title {
             color: #2d3748;
             font-size: 28px;
             margin-bottom: 30px;
             text-align: center;
-            font-weight: 600;
         }
-
-        /* 下载按钮样式 */
-        .download-btn {
+        /* 美化下载链接为按钮样式 */
+        .download-link {
             background-color: #4299e1;
             color: white;
-            border: none;
             padding: 16px 32px;
             font-size: 18px;
             border-radius: 8px;
-            cursor: pointer;
+            text-decoration: none; /* 去掉链接下划线 */
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(66, 153, 225, 0.2);
         }
-
-        /* 按钮hover交互效果 */
-        .download-btn:hover {
+        .download-link:hover {
             background-color: #3182ce;
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(66, 153, 225, 0.3);
-        }
-
-        /* 按钮点击效果 */
-        .download-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 8px rgba(66, 153, 225, 0.2);
-        }
-
-        /* 提示文本样式 */
-        .hint-text {
-            color: #718096;
-            font-size: 14px;
-            margin-top: 20px;
-            text-align: center;
         }
     </style>
 </head>
@@ -73,31 +49,7 @@
     <!-- 页面标题 -->
     <h1 class="page-title">Download Your PDF File</h1>
     
-    <!-- 下载按钮（英文） -->
-    <button class="download-btn" onclick="autoDownloadPDF()">Download PDF Now</button>
-    
-    <!-- 提示文本 -->
-    <p class="hint-text">Click the button above to download the PDF file automatically</p>
-
-    <script>
-        // 自动下载PDF核心函数
-        function autoDownloadPDF() {
-            // 替换成你本地的PDF文件名（必须和文件完全一致）
-            const pdfFileName = "LFGB珐琅汤锅2023.pdf";
-            
-            // 创建隐藏的a标签触发下载
-            const a = document.createElement('a');
-            a.href = pdfFileName;
-            a.download = pdfFileName;
-            a.style.display = 'none';
-            document.body.appendChild(a);
-            
-            // 模拟点击触发下载
-            a.click();
-            
-            // 清理DOM
-            document.body.removeChild(a);
-        }
-    </script>
+    <!-- 核心：把下载链接添加到这里（body标签内） -->
+    <a href="PDF-Dutch Ovens/LFGB-Dutch-Ovens-2023.pdf" download class="download-link">Download PDF Now</a>
 </body>
 </html>
