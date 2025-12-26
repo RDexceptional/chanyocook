@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Download Page</title>
     <style>
-        /* 保留之前的美化样式，让链接/按钮更美观 */
+        /* 保留所有美化样式，确保页面美观 */
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +27,6 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        /* 美化下载链接为按钮样式 */
         .download-link {
             background-color: #4299e1;
             color: white;
@@ -49,7 +48,7 @@
     <!-- 页面标题 -->
     <h1 class="page-title">Download Your PDF File</h1>
     
-    <!-- 核心：把下载链接添加到这里（body标签内） -->
-    <a href="PDF-Dutch Ovens/LFGB-Dutch-Ovens-2023.pdf" download class="download-link">Download PDF Now</a>
+    <!-- 核心修改：使用PDF的绝对路径，确保100%能找到文件 -->
+    <a href="https://rdexceptional.github.io/chanyocook/PDF-Dutch%20Ovens/LFGB-Dutch-Ovens-2023.pdf" download class="download-link">Download PDF Now</a>
 </body>
 </html>
