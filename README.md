@@ -1,2 +1,0 @@
-# chanyocook
-chanyocook
